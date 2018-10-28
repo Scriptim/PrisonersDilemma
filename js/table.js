@@ -13,6 +13,23 @@ const generateTable = () => {
   return table
 }
 
+const tableHeatmap = (checkbox, table) => {
+  const minValue = table.getAttribute('data-min')
+  const maxValue = table.getAttribute('data-max')
+
+  checkbox.onchange = event => {
+    for (let td of table.querySelectorAll('td')) {
+      if (checkbox.checked) {
+        let num = parseFloat(td.innerHTML)
+        let alpha = (num - minValue) / (maxValue - minValue)
+        td.style.backgroundColor = `rgba(255, 72, 0, ${alpha})`
+      } else {
+        td.removeAttribute('style')
+      }
+    }
+  }
+}
+
 const thead = () => {
   const tr = document.createElement('tr')
   tr.appendChild(document.createElement('th'))

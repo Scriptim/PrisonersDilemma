@@ -42,3 +42,7 @@ span.badge {
   display: block;
   overflow-x: auto;
 }
+
+#table > form {
+  margin-top: 1em;
+}
