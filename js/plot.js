@@ -33,6 +33,51 @@ const plotAverageScoreIncrease = () => {
   Plotly.newPlot('averagePlot', data, layout, { displayModeBar: false })
 }
 
+const plotAlgorithmAnalysis = (algorithm, average) => {
+  const data = []
+
+  for (let algorithm2 of algorithmKeys) {
+    let trace = {
+      x: [],
+      y: [],
+      mode: 'lines',
+      name: algorithm2
+    }
+
+    let prisonersDilemma = new PrisonersDilemma({
+      algorithm1: algorithm,
+      algorithm2
+    })
+
+    for (let i = 0; i <= 100; i++) {
+      trace.x.push(i)
+
+      if (average) {
+        trace.y.push(prisonersDilemma.prisoner1.averageScore())
+      } else {
+        trace.y.push(prisonersDilemma.prisoner1.score)
+      }
+
+      prisonersDilemma.next()
+    }
+
+    data.push(trace)
+  }
+
+  const layout = {
+    title: average ? 'Average' : 'Total',
+    xaxis: {
+      title: 'Iteration'
+    },
+    yaxis: {
+      title: 'Own Score'
+    }
+  }
+
+  const div = 'coursePlot' + (average ? 'Avg' : '')
+  Plotly.newPlot(div, data, layout, { displayModeBar: false })
+}
+
 const plotCooperationRatio = (prisoner, div) => {
   const cooperated = prisoner.history.filter(x => x).length
   const defected = prisoner.history.filter(x => !x).length
