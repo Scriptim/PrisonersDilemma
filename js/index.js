@@ -19,3 +19,5 @@ document.getElementById('i').value = n
 const table = document.getElementById('table')
 table.querySelector('h3').after(generateTable())
 tableHeatmap(document.getElementById('heatmap'), table.querySelector('table'))
+
+plotAverageScoreIncrease()

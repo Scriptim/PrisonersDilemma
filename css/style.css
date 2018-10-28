@@ -53,4 +53,5 @@ span.badge {
 
 #table > form {
   margin-top: 1em;
+  margin-bottom: 0;
 }
