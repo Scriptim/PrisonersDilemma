@@ -15,3 +15,25 @@ blockquote {
 hr {
   margin: 4em;
 }
+
+form {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+form > * {
+  display: inline-block;
+}
+
+input[type="number"] {
+  width: 100px;
+  text-align: center;
+}
+
+th, td {
+  text-align: center !important;
+}
+
+span.badge {
+  letter-spacing: 0.2rem;
+}

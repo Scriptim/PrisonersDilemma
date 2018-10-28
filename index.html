@@ -46,8 +46,56 @@
 
     <hr>
 
+    <section id="game">
+      <h2></h2>
+
+      <form action="#game">
+        <span>Let</span>
+        <div class="form-group">
+          <select id="s1" name="s1"></select>
+        </div>
+        <span>play against</span>
+        <div class="form-group">
+          <select id="s2" name="s2"></select>
+        </div>
+        <span>for</span>
+        <div class="form-group">
+          <input type="number" min="1" step="1" placeholder="n" id="i" name="i">
+        </div>
+        <span>iterations!</span>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+
+      <table class="table-alternating">
+        <thead>
+          <tr>
+            <th>Iteration</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Average</th>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <hr>
+
     <script src="js/PrisonersDilemma.js" type="text/javascript"></script>
     <script src="js/algorithms.js" type="text/javascript"></script>
+    <script src="js/iterations.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
   </main>
 
 </body>
