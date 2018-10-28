@@ -70,4 +70,7 @@ const writeIterations = (algorithm1, algorithm2, iterations) => {
   const tfootTr = game.querySelector('tfoot > tr')
   tfootTr.appendChild(averageScoreFootTd(prisonersDilemma.prisoner1))
   tfootTr.appendChild(averageScoreFootTd(prisonersDilemma.prisoner2))
+
+  plotCooperationRatio(prisonersDilemma.prisoner1, 'ratio1')
+  plotCooperationRatio(prisonersDilemma.prisoner2, 'ratio2')
 }

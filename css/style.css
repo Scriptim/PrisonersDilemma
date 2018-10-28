@@ -38,6 +38,14 @@ span.badge {
   letter-spacing: 0.2rem;
 }
 
+#game {
+  text-align: right;
+}
+
+#ratio1, #ratio2 {
+  display: inline-block;
+}
+
 #table table {
   display: block;
   overflow-x: auto;
