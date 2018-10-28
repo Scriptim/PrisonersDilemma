@@ -1,0 +1,17 @@
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+main {
+  text-align: justify;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 6px solid #c1c0bd;
+  padding-left: 12px;
+}
+
+hr {
+  margin: 4em;
+}
