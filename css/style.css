@@ -37,3 +37,8 @@ th, td {
 span.badge {
   letter-spacing: 0.2rem;
 }
+
+#table table {
+  display: block;
+  overflow-x: auto;
+}

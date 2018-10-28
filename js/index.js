@@ -15,3 +15,6 @@ s2.value = urlParams.get('s2') || 'RAND'
 const n = parseInt(urlParams.get('i') || 3)
 writeIterations(s1.value, s2.value, n)
 document.getElementById('i').value = n
+
+const table = document.getElementById('table')
+table.querySelector('h3').after(generateTable())
