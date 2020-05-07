@@ -46,6 +46,22 @@ span.badge {
   text-align: right;
 }
 
+#game tbody {
+  display: block;
+  max-height: 24em;
+  overflow-x: auto;
+}
+
+#game tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#game tfoot tr {
+  margin-top: 1em;
+}
+
 #ratio1, #ratio2 {
   display: inline-block;
 }
