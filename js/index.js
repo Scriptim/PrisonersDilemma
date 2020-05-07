@@ -7,6 +7,7 @@ for (let algorithm of algorithmKeys) {
   let option = document.createElement('option')
   option.value = algorithm
   option.innerHTML = algorithm
+  option.title = algorithms[algorithm].name
   s1.appendChild(option)
   s2.appendChild(option.cloneNode(true))
   a.appendChild(option.cloneNode(true))

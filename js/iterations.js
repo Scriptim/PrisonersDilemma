@@ -56,7 +56,9 @@ const averageScoreFootTd = prisoner => {
 const writeIterations = (algorithm1, algorithm2, iterations) => {
   const game = document.getElementById('game')
 
-  game.querySelector('h2').innerHTML = `${algorithm1} vs. ${algorithm2}`
+  const algorithmElem1 = `<span popover-left="${algorithms[algorithm1].name}">${algorithm1}</span>`
+  const algorithmElem2 = `<span popover-right="${algorithms[algorithm2].name}">${algorithm2}</span>`
+  game.querySelector('h2').innerHTML = `${algorithmElem1} vs. ${algorithmElem2}`
   const ths = game.querySelectorAll('thead > tr > th')
   ths[1].innerHTML = `${algorithm1}'s score`
   ths[2].innerHTML = `${algorithm2}'s score`

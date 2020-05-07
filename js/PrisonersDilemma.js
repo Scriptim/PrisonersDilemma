@@ -3,7 +3,7 @@ class Prisoner {
     this.score = 0
     this.history = []
     this.algorithm = algorithm
-    this.cooperates = algorithms[algorithm]
+    this.cooperates = algorithms[algorithm].turn
   }
 
   averageScore() {
